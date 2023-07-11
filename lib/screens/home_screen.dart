@@ -117,12 +117,21 @@ class _ContactCardState extends State<ContactCard> {
                     height: 50,
                     width: 50,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(180),
-                        color: Colors.black,
-                        image: DecorationImage(
-                            image:
-                                Image.network(widget.contact.pictureLink).image,
-                            fit: BoxFit.fill)),
+                      borderRadius: BorderRadius.circular(180),
+                      color: Colors.black,
+                      image: DecorationImage(
+                          image: FadeInImage.assetNetwork(
+                            image: widget.contact.pictureLink,
+                            placeholder: 'assets/images/account_circle.png',
+                            fit: BoxFit.fill,
+                            placeholderFit: BoxFit.fill,
+                            imageErrorBuilder: (context, error, stackTrace) {
+                              return Image.asset(
+                                  'assets/images/account_circle.png');
+                            },
+                          ).image,
+                          fit: BoxFit.fill),
+                    ),
                   ),
                   const SizedBox(
                     width: 20,

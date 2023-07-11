@@ -30,6 +30,9 @@ class PictureName extends StatelessWidget {
                       placeholder: 'assets/images/account_circle.png',
                       fit: BoxFit.fill,
                       placeholderFit: BoxFit.fill,
+                      imageErrorBuilder: (context, error, stackTrace) {
+                        return Image.asset('assets/images/account_circle.png');
+                      },
                     ).image,
                     fit: BoxFit.fill)),
           ),
