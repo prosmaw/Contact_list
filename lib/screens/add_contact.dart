@@ -6,7 +6,6 @@ import '../main.dart';
 import '../models/contacts.dart';
 import 'details_screen.dart';
 import 'home_screen.dart';
-import 'widgets/edit_email.dart';
 
 class AddContact extends StatefulWidget {
   const AddContact({super.key});
@@ -53,12 +52,38 @@ class _AddContactState extends State<AddContact> {
                   value: "",
                   controller: firstController,
                   edit: edit),
+              const SizedBox(
+                height: 10,
+              ),
               ProfileParameter(
                 icon: Icons.person,
                 parameterName: 'Nom de famille',
                 value: "",
                 controller: lastController,
                 edit: edit,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ProfileParameter(
+                icon: Icons.smartphone,
+                parameterName: 'Numero de téléphone',
+                value: "",
+                controller: phoneController,
+                edit: edit,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              //showing cell number
+              ProfileParameter(
+                  icon: Icons.call,
+                  parameterName: 'Numero célulaire',
+                  value: "",
+                  controller: cellController,
+                  edit: edit),
+              const SizedBox(
+                height: 10,
               ),
               ProfileParameter(
                 icon: Icons.mail,
@@ -67,30 +92,45 @@ class _AddContactState extends State<AddContact> {
                 controller: emailController,
                 edit: edit,
               ),
+              const SizedBox(
+                height: 10,
+              ),
               ProfileParameter(
                   icon: Icons.home,
                   parameterName: "Num Rue",
                   value: "",
                   controller: streetNBController,
                   edit: edit),
+              const SizedBox(
+                height: 10,
+              ),
               ProfileParameter(
                   icon: Icons.home,
                   parameterName: "Nom Rue",
                   value: "",
                   controller: streetNController,
                   edit: edit),
+              const SizedBox(
+                height: 10,
+              ),
               ProfileParameter(
                   icon: Icons.home,
                   parameterName: "Ville",
                   value: "",
                   controller: cityController,
                   edit: edit),
+              const SizedBox(
+                height: 10,
+              ),
               ProfileParameter(
                   icon: Icons.home,
                   parameterName: "Pays",
                   value: "",
                   controller: countryController,
                   edit: edit),
+              const SizedBox(
+                height: 10,
+              ),
               ProfileParameter(
                   icon: Icons.cake,
                   parameterName: 'Date de naissance',
@@ -117,8 +157,8 @@ class _AddContactState extends State<AddContact> {
   }
 
   void addingContact(BuildContext context) async {
-    return setState(() async {
-      int? size = await dbhelper.size(database);
+    int? size = await dbhelper.size(database);
+    return setState(() {
       Contact ct = Contact(
           first: firstController.text,
           last: lastController.text,
@@ -133,6 +173,7 @@ class _AddContactState extends State<AddContact> {
           phone: phoneController.text,
           pictureLink: "");
       dbhelper.insertContact(ct, database);
+      // ignore: use_build_context_synchronously
       Navigator.push(
         context,
         MaterialPageRoute(

@@ -25,7 +25,12 @@ class PictureName extends StatelessWidget {
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(180),
                 image: DecorationImage(
-                    image: Image.network(widget.contact.pictureLink).image,
+                    image: FadeInImage.assetNetwork(
+                      image: widget.contact.pictureLink,
+                      placeholder: 'assets/images/account_circle.png',
+                      fit: BoxFit.fill,
+                      placeholderFit: BoxFit.fill,
+                    ).image,
                     fit: BoxFit.fill)),
           ),
         ),
