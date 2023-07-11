@@ -12,6 +12,9 @@ Avoir une version récente de flutter.
 
 Une fois le dépôt cloné, installer les dépendances avec "dart pub get".
 
+PS: Projet intèressant et challegant prenant en compte le fait d'une première utilisation de sqlite 
+en flutter (pour habitude d'utiliser hive). 
+
 A new Flutter project.
 
 ## Getting Started
