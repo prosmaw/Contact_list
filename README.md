@@ -13,6 +13,8 @@ Avoir une version récente de flutter.
 
 Une fois le dépôt cloné, installer les dépendances avec "dart pub get".
 
+Pour l'ajout de contact il faut remplir toute les cases (les erreurs de cases vide n'ont pa été gérer).
+
 PS: Projet intèressant et challegant prenant en compte le fait d'une première utilisation de sqlite 
 en flutter (pour habitude d'utiliser hive). 
 
