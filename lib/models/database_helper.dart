@@ -57,5 +57,13 @@ class DatabaseHelper {
     return count;
   }
 
+  Future<List<Contact>> researchContact(String text, Database db) async {
+    List<Map<String, dynamic>> maps = await db.rawQuery(
+        "SELECT * FROM contacts WHERE ${Constants.last} LIKE '%$text%' OR ${Constants.first} Like '%$text%'");
+    return List.generate(maps.length, (index) {
+      return Contact.fromMap(maps[index]);
+    });
+  }
+
   Future close(Database db) async => db.close();
 }

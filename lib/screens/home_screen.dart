@@ -30,13 +30,17 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SearchBar(
-                  controller: searchBarController,
-                  leading: const Icon(Icons.search),
-                  hintText: "Rechercher un contact",
-                  shadowColor: MaterialStateProperty.resolveWith(
-                      (states) => Colors.transparent),
-                  padding: MaterialStateProperty.resolveWith(
-                      (states) => const EdgeInsets.only(left: 16, right: 16))),
+                controller: searchBarController,
+                leading: const Icon(Icons.search),
+                hintText: "Rechercher un contact",
+                shadowColor: MaterialStateProperty.resolveWith(
+                    (states) => Colors.transparent),
+                padding: MaterialStateProperty.resolveWith(
+                    (states) => const EdgeInsets.only(left: 16, right: 16)),
+                onTap: () {
+                  Navigator.pushNamed(context, '/searchPage');
+                },
+              ),
               const SizedBox(
                 height: 20,
               ),
@@ -61,6 +65,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+      //button for adding contact
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(

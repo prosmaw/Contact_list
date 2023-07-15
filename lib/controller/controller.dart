@@ -46,4 +46,14 @@ class Controller {
       }
     }
   }
+
+  Future researching(String query) async {
+    List<Contact> listContact = [];
+    int? dbsize = await dbhelper.size(database);
+    if (dbsize! > 0) {
+      listContact = await dbhelper.researchContact(query, database);
+
+      return listContact;
+    }
+  }
 }
