@@ -1,7 +1,7 @@
 # dac_test
 
 
-Test de niveau de Dac Technologies.
+
 
 Ce projet est une application qui affiche des informations sous forme de contacts en receuillant 
 les données depuis une API si la base de donnée locale est vide.
