@@ -1,22 +1,15 @@
-# dac_test
+# Contact_list
 
 
 
 
-Ce projet est une application qui affiche des informations sous forme de contacts en receuillant 
-les données depuis une API si la base de donnée locale est vide.
-Possibilité de modification, suppression, ajout et de recherche de contact.
-Ouverture des applications gmail et telephone en prenant les coordonnées du contact aprés appui sur les icons correspondant.
+A contact list app that retrieves data from an API if the local database is empty (SQLite used for local staorage).
+Key functionnalities: modification, deletion, addition, and search of contacts.
+                      Possibility to open Gmail, phone with target info after a click on the corresponding icons.
 
-Exécution de l'application: disposé d'un editeur de code et avoir flutter et dart installer sur votre machine.
-Avoir une version récente de flutter.
 
-Une fois le dépôt cloné, installer les dépendances avec "dart pub get".
-
-Pour l'ajout de contact il faut remplir toute les cases (les erreurs de cases vide n'ont pa été gérer).
-
-PS: Projet intèressant et challegant prenant en compte le fait d'une première utilisation de sqlite 
-en flutter (pour habitude d'utiliser hive). 
+After cloning of the project, install dependecies with "dart pub get".
+ 
 
 A new Flutter project.
 
