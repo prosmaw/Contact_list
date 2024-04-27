@@ -3,12 +3,12 @@
 
 
 
-A contact list app that retrieves data from an API if the local database is empty (SQLite used for local staorage).
+A contact list app that retrieves data from an API if the local database is empty (SQLite used for local storage).
 Key functionnalities: modification, deletion, addition, and search of contacts.
                       Possibility to open Gmail, phone with target info after a click on the corresponding icons.
 
 
-After cloning of the project, install dependecies with "dart pub get".
+After cloning the project, install dependecies with "dart pub get".
  
 
 A new Flutter project.
